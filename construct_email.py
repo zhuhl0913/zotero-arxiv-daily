@@ -150,6 +150,7 @@ def send_email(sender:str, receiver:str, password:str,smtp_server:str,smtp_port:
     msg['To'] = _format_addr('You <%s>' % receiver)
     today = datetime.datetime.now().strftime('%Y/%m/%d')
     msg['Subject'] = Header(f'Daily arXiv {today}', 'utf-8').encode()
+    print(f"SMTP_SERVER: {smtp_server}, SMTP_PORT: {smtp_port}")
 
     try:
         server = smtplib.SMTP(smtp_server, smtp_port)
