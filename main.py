@@ -181,7 +181,7 @@ if __name__ == '__main__':
 
     html = render_email(papers)
     logger.info("Sending email...")
-    print(html)
+    # print(html)
     send_email(sender="1241934446@qq.com", receiver="zhuhl2024@shanghaitech.edu.cn", password="hkkorjngkzrdgeej", smtp_server="smtp.qq.com", smtp_port=465, html=html)
     # send_email(args.sender, args.receiver, args.sender_password, args.smtp_server, args.smtp_port, html)
     logger.success("Email sent successfully! If you don't receive the email, please check the configuration and the junk box.")
